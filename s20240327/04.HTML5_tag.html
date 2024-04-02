@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!-- html又稱為根元素 root -->
+<!-- css: root 根元素(html)選擇器 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>標籤元素</title>
+</head>
+
+<body>
+    <h1>常用標籤</h1>
+    <h2>標題 h1~h6</h2>
+    <h1>Hello World</h1>
+    <h2>Hello World</h2>
+    <h3>Hello World</h3>
+    <h4>Hello World</h4>
+    <h5>Hello World</h5>
+    <h6>Hello World</h6>
+    <hr>
+    <h2>段落 p</h2>
+    <p>我是段落文字</p>
+    <!-- lorem英文假字 -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repellendus cupiditate modi, accusantium quae,
+        possimus ut labore eius omnis pariatur consequuntur. Facilis aspernatur laborum molestiae. Tempora deserunt
+        placeat ab ratione.</p>
+
+    <!-- lorem5 => 5個假字 -->
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <!-- ctlorem -->
+    <p>立刻臺灣民眾地面家長矛盾指數屬性，實行一項微微來看下午任意總統文明應用房價農業渠道如果您，本站知名程度讓她開發商西方體會老大提升網域名稱一口氣，推坑王拍攝桌面穿著原來標題我一紛紛本書一下子事件，反對外面請大家人大黑暗體育好像轉貼有一很少當地，一會你還成了。
+    </p>
+
+    <!-- ctlorem3 => 3個中文假字 -->
+    <p>都是把</p>
+
+    <hr>
+
+    <h2>換行 br</h2>
+    蜘蛛人<br>
+    鋼鐵人<br>
+    美國隊長<br>
+
+    <!-- 
+    以下為無結尾標籤、空標籤
+    meta、link、input、br、hr
+ -->
+
+    <hr>
+
+    <h2 id="ol_list">ol 有序號清單</h2>
+    <!-- ordered list -->
+    <ol>
+        <!-- list item 清單項目 -->
+        <li>寫程式</li>
+        <li>看動畫</li>
+        <li>吃飯</li>
+        <li>睡覺</li>
+    </ol>
+
+    <!-- emmet -->
+    <!-- ol>li*5 -->
+    <ol>
+        <li>you</li>
+        <li></li>
+        <li>you</li>
+        <li></li>
+        <li>you</li>
+    </ol>
+
+    <h2 id="ul_list">無序號的清單 ul</h2>
+    <!-- type棄用，建議用css list-style-type調整 -->
+    <ul>
+        <li type="square">上了臺。</li>
+        <li type="square">Lorem, ipsum dolor.</li>
+        <li type="square">Lorem, ipsum dolor.</li>
+        <li type="square">上了臺。</li>
+        <li type="square">Lorem, ipsum dolor.</li>
+    </ul>
+
+    <hr>
+
+    <h2>HTML 巢狀概念</h2>
+    <p>巢狀不只在HTML，其他技術也會有此概念巢狀有父、子或祖先關係</p>
+    <p>同一層級又稱為兄弟</p>
+
+    <ul>
+        <li>
+            <h3>後端技能</h3>
+            <ol>
+                <li>PHP</li>
+                <li>SQL</li>
+                <li>Laravel</li>
+                <li>database</li>
+            </ol>
+        </li>
+        <li>
+            <h3>前端技能</h3>
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Vue</li>
+            </ol>
+        </li>
+    </ul>
+
+    <hr>
+
+    <h2 id="a_link">連結 a</h2>
+    <!-- 屬性
+href：超連結的網址
+target：開啟方式_blank開新分頁 
+-->
+
+    <!-- 絕對路徑，去別人家找東西 -->
+    <a href="http://www.google.com" target="_blank">Google</a><br>
+    <a href="https://tw.yahoo.com">yahoo</a><br>
+    <!-- 相對路徑在自家找東西 ，前面加./可用選擇方式來選檔案-->
+    <a href="./02.HTML_old.html">前往HTML_old.html</a><br>
+    <!-- 跳到文件內部，需用# + id(id需前面便須設定) -->
+    <a href="#ol_list">前往本文件的ol</a><br>
+    <a href="#ul_list">前往本文件的ul</a><br>
+    <a href="#a_link">前往a連結位置</a><br>
+    <hr>
+
+    <h2>圖片img</h2>
+    <h3>絕對路徑</h3>
+    <!--常用的圖片副檔名 jpg、png、gif 
+    src：圖片路徑
+    width、height只須設定一個就好，兩個一起設定可能會造成圖片變形
+    title：圖片名稱(滑鼠移到圖片上會顯示)
+    alt：替代文字，當圖片連結失效時會顯示
+
+    例如：地址(243新北市泰山區貴子里致遠新村55之1號1113號教室13號的位置)
+-->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Dalek_%28Dr_Who%29.jpg/800px-Dalek_%28Dr_Who%29.jpg"
+        width="400" alt="dalek" title="dalek">
+
+    <!-- 
+    ./代表當前資料夾
+    ../代表上一層資料夾
+    做自己的網站開發時，建議使用相對路徑
+    理由是換主機時，網域名稱會改變，絕對路徑會改到瘋掉
+-->
+    <h3>相對路徑</h3>
+
+    <img src="./images/tardis.jpg" alt="tardis fly in universe" title="tardis" width="400"><br>
+    <a href="./others/others.html">others.html</a>
+    <hr>
+
+    <h2>頁框 iframe</h2>
+    <a href="./others/hello.html" target="yt">載入到hello.html到一個name為yt頁框裡面</a>
+    <!-- frameborder：邊框
+    width、height：寬高
+-->
+    <!-- 預設頁為others.html -->
+    <iframe src="./others/others.html" frameborder="1" width="750" height="450" name="yt"></iframe>
+
+    <hr>
+    <!-- 
+    cellspacing: 儲存格與儲存格之間的距離
+    cellpadding:儲存格內容與邊框的距離
+-->
+    <h2>表格</h2>
+    <table border="1" align="center" width="800" cellspacing="20" cellpadding="50">
+        <caption>後端班級成績表</caption>
+        <!-- 頭 -->
+        <thead></thead>
+        <tr>
+            <!-- th可以讓文字水平垂直置中&粗體 -->
+            <th>姓名</th>
+            <th>PHP</th>
+            <th>Javascript</th>
+        </tr>
+
+        <!-- 身體 -->
+        <tbody>
+            <tr align="center">
+                <td>大明</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr align="center">
+                <td>小明</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr align="center">
+                <td>三明</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <!-- 腳 -->
+        <tfoot>
+            <tr>
+                <td>共3人</td>
+                <td>總平均:100</td>
+                <td>總平均:100</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>表格合併</h2>
+    <p> colspan(欄合併)：左吃右，右消失，colspan="吃幾個+自己"</p>
+    <p> rowspan(列合併)：上吃下，下消失，rowspan="吃幾個+自己"</p>
+
+    <!-- 建立6*6表格 tbody可以不用寫-->
+
+    <!-- table>tr*6>td{$}*6 -->
+    <table border="1" width="600" align="center">
+        <tr align="center">
+            <td colspan="3">1</td>
+            <td>4</td>
+            <td colspan="2">5</td>
+        </tr>
+        <tr align="center">
+            <td colspan="6">1</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="4">1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td rowspan="4">6</td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+
+        </tr>
+        <tr align="center">
+
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+
+        </tr>
+        <tr align="center">
+
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+
+        </tr>
+    </table>
+
+    <h2>表單 form</h2>
+    <!-- 建立一個10*2表單 -->
+    <!-- action表單送出網址
+method：表單送出的方式 get、post
+    get 是將資料放在網址上，不安全，帳號、密碼重要資訊不要用
+    post 是將資料放在body裡面，安全，用來傳送重要資訊
+-->
+    <form method="post" action="sample.php" enctype="multipart/form-data">
+        <table border="1" align="center" width="500">
+            <tr>
+                <td width="100">帳號：</td>
+                <!-- 
+            type輸入框的類型
+            maxlength 字元最大長度
+            size 寬度(css可以控制寬度)
+            placeholder 佔位文字，提示用
+            ★name 表單名稱，後端接收用
+        -->
+                <td>
+                    <input type="text" maxlength="10" size="20" placeholder="請輸入帳號" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td>密碼</td>
+                <td>
+                    <input type="password" placeholder="請輸入密碼" name="pwd">
+                </td>
+            </tr>
+            <tr>
+                <td>性別：</td>
+                <!-- radio為單選，name需相同表示為同一組，checked為預設勾選 -->
+                <td>
+                    <input type="radio" value="male" name="gender">男
+                    <input type="radio" value="female" name="gender" checked>女
+                </td>
+            </tr>
+            <tr>
+                <td>興趣：</td>
+                <td>
+                    <input type="checkbox" value="coding" name="hobby">寫程式
+                    <input type="checkbox" value="reading" name="hobby">閱讀
+                    <input type="checkbox" value="eating" name="hobby">吃飯
+                    <input type="checkbox" value="sleeping" name="hobby">睡覺
+                </td>
+            </tr>
+            <tr>
+                <td>出生年月：</td>
+                <td>
+                    <select name="year_select">
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>留言訊息：</td>
+                <td>
+                    <!-- 
+                cols可以寫幾個字元
+                rows可以寫幾列文字
+                -->
+                    <textarea name="message" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>上傳檔案</td>
+                <td>
+                    <!-- form標籤須設定enctype="multipart/form-data -->
+                    <input type="file" name="upload">
+                </td>
+            </tr>
+            <tr>
+                <td>隱藏欄位</td>
+                <!-- type="hidden"隱藏欄位，用來傳遞資料，但不會顯示在畫面上 -->
+                <td><input type="hidden" name="hidden_id" value=""></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="送出">
+                    <input type="reset" value="重置">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>跳脫字元(特殊字元)</h2>
+    <!-- 例如：我要怎麼在網頁上呈現<h1>HelloWorld</h1> -->
+    <!-- 
+    &lt; <
+    &gt; >
+    &copy; ©(版權符號)
+    &nbsp; 空格
+    https://footmark.com.tw/news/web-design/html/special-symbol-table-html/
+ -->
+    &lt;h1&gt;HelloWorld&lt;/h1&gt;
+    <br>
+    2024&copy; by yt design
+
+    <h1>div與span標籤</h1>
+    <p>div是區塊元入經典的代表，span是行內元素經典的代表作</p>
+    <p>排版重要觀念之一：先判斷該元素是哪個類型的元素</p>
+
+    <h2>區塊元素的現象</h2>
+    <p>前後換行，不給他人佔據自己的位置，即便設定寬度</p>
+    <div style="background: yellow;width: 100px;">Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <h2>行內元素</h2>
+    <p>會乖乖排在一起，擺滿父元素寬度後會換行</p>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+    <a href="#">Link</a>
+</body>
+
+</html>
