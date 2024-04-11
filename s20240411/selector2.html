@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ,都選 */
+        p,
+        div {
+            /* color: darkolivegreen; */
+        }
+
+        /* >  只指定後代一層*/
+        /* class權重較重因此就算在上面也不會被底下的效果覆蓋 */
+        .my-parent>p {
+            /* color: pink; */
+        }
+
+        div>p {
+            /* color: red; */
+        }
+
+        /* 空格 後代全部都被汙染 */
+        div p {
+            /* color: purple; */
+        }
+
+        /* ~ 兄弟姊妹同輩 全部 */
+        /* css的屬性中如果使用class來指稱，會影響class底下的所有後代 */
+        .my-parent~div {
+            /* color: blue; */
+        }
+
+        .my-parent {
+            /* color: blueviolet; */
+        }
+
+        /* ~兄弟姊妹相鄰 鄰近的 */
+        #liu+div {
+            color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- , > ~ + 空格 . : -->
+    <div>
+        <div class="my-parent" id="liu">
+            劉備
+        </div>
+        <div>劉背影分身1</div>
+        <div>劉背影分身2</div>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;劉禪
+        </p>
+
+    </div>
+
+    <div>
+        <div class="my-parent">
+            關羽
+        </div>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關平
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關興
+        </p>
+        <div>
+            <h1>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;關小星
+                </p>
+            </h1>
+        </div>
+
+    </div>
+
+    <div>
+        <div class="my-parent">
+            張飛
+        </div>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;張苞
+        </p>
+    </div>
+</body>
+
+</html>
