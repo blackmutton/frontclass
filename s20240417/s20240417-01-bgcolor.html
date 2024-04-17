@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .container {
+            background-color: lightpink;
+            /* div如果沒文字會顯示不出來，所以須先設定寬高 */
+            width: 80%;
+            /* height通常會用vh(螢幕可視範圍高度的百分比)，如果想以%來顯示也可以，但須先在外層設定確定的高度 */
+            height: 100vh;
+            margin: auto;
+        }
+
+        table {
+            /* 寬度是隨著外層而設定，所以是.container的80% */
+            width: 80%;
+            background-color: lightyellow;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        td,
+        th {
+            /* width: 50%; */
+            height: 50vh;
+        }
+
+        td>div {
+            background-color: red;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td width="80%">1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+
+                    </div>
+                </td>
+                <td>
+                    <div>
+
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
