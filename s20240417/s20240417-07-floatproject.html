@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            clear: both;
+            /* 如果不用clear:both;則當區塊的高度不對等時會導致較大的區塊會直接侵害到下一行的空間，最終導致下一行的裂解 */
+            /* 
+            clear:left;
+            clear:right;
+            */
+        }
+
+        .box {
+            height: 300px;
+        }
+
+        .box1 {
+            width: 100%;
+            background-color: lightblue;
+        }
+
+        /* .box21 .box22 */
+        .box21 {
+            float: left;
+            width: 50%;
+            background-color: lightpink;
+        }
+
+        .box22 {
+            border: 2px black solid;
+            float: right;
+            height: 500px;
+            width: 50%;
+            background-color: lightyellow;
+        }
+
+        /* .box31 .box32 .box32 */
+        .box31 {
+            float: left;
+            width: 33%;
+            background-color: lightcyan;
+        }
+
+        .box32 {
+            float: left;
+            width: 33%;
+            background-color: lightyellow;
+        }
+
+        .box33 {
+            float: right;
+            width: 33%;
+            background-color: lightgreen;
+        }
+
+        div>iframe {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="box box1">
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="box box21">
+
+        </div>
+        <div class="box box22">
+            <iframe width="1250" height="703" src="https://www.youtube.com/embed/wjZofJX0v4M"
+                title="But what is a GPT?  Visual intro to transformers | Chapter 5, Deep Learning" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="box box31">
+
+        </div>
+        <div class="box box32">
+
+        </div>
+        <div class="box box33">
+
+        </div>
+
+    </div>
+</body>
+
+</html>
