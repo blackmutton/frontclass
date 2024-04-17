@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            height: 2000px;
+            background-color: aliceblue;
+        }
+
+        /* 黏性 tricky 黏在top0 */
+        .div-sticky {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>h3 Lorem ipsum dolor sit amet consectetur.</h3>
+    <p>
+        重點公告
+    </p>
+    <!-- position:sticky需要上面有東西才能生效 -->
+    <div class="div-sticky">
+        position:sticky;
+        top:0;
+
+    </div>
+</body>
+
+</html>
