@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 300px;
+            height: 300px;
+            /* linear-gardient 線性漸層 無數量上限，但顏色最起碼需兩個 */
+            background-image: linear-gradient(red, orange);
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            /* 
+            to top = 0deg/360deg 
+            to right = 90deg
+            to bottom = 180deg
+            to left - 270deg
+            */
+            /* 也可以指定角度 */
+            /* background-image: linear-gradient(45deg, red, orange); */
+            background-image: linear-gradient(to bottom right, red, orange, yellow);
+        }
+
+        #div3 {
+            width: 300px;
+            height: 300px;
+            /* 可以靠百分比或px來調整顏色漸變位置 */
+            /* background-image: linear-gradient(red 100px, orange); */
+            background-image: linear-gradient(red 90%, orange);
+        }
+
+        #div4 {
+            width: 300px;
+            height: 300px;
+            /* 如果漸變位置相同會有明顯的分隔線 */
+            /* background-image:linear-gradient(red 50% ,orange 50%); */
+            /* 
+            這邊設定為45度傾斜，漸變位置的交界點分別為10%、90%(顏色1 漸變位置起點1, 顏色2 漸變位置終點1,顏色1 漸變位置起點2, 顏色2 漸變位置終點2)
+            漸變位置1和漸變位置2加起來的%最多100%
+            */
+            background-image: linear-gradient(45deg, red 10%, orange 10%, orange 90%, red 90%);
+        }
+
+        #div5 {
+            width: 300px;
+            height: 300px;
+            /* repeating 重複 */
+            /* 如果漸層不夠大，會重複填滿區域 */
+            background-image: repeating-linear-gradient(red, orange 10%);
+        }
+
+        #div6 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-linear-gradient(45deg, black 0px, black 20px, orange 20px, orange 40px);
+            /* background-image: linear-gradient(45deg, black 0px, black 20px, orange 20px, orange 40px); */
+        }
+
+        #div7 {
+            width: 300px;
+            height: 300px;
+            /* lightblue 0~10% 和lightgreen在10%時有明顯交界，因為接下來lightgreen碰到lightblue，漸層到90%，lightgreen直接到100%  */
+            background-image: linear-gradient(lightblue 10%, lightgreen 10%, lightblue 90%, lightgreen 90%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+    <div id="div7"></div>
+</body>
+
+</html>
