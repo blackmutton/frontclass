@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red, orange);
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 80%, orange);
+        }
+
+        #div3 {
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(red 50%, orange 50%);
+        }
+
+        #div4 {
+            width: 300px;
+            height: 300px;
+            /* radial-gradient(形狀 尺寸 at 圓心位置, 顏色...) */
+            /* 
+            位置: x軸 y軸(y軸可不打，會自動補正將(指定x軸,y軸center)設為中心)
+            */
+            /* 形狀 circle elipse */
+            /*
+            circle 尺寸:一個參數當半徑
+            elipse 尺寸:兩個參數代表寬高
+            */
+            background-image: radial-gradient(ellipse 100px 50px at 200px 250px, red, orange);
+        }
+
+        #div5 {
+            width: 500px;
+            height: 300px;
+            /* 
+            區塊是長方形的話，漸層會預設橢圓形
+            區塊是正方形的話，漸層會預設圓形
+            */
+            /* background-image: radial-gradient(red 50%, orange 50%); */
+            /* 
+            closest-corner跟最近的角的距離當半徑
+            closest-side 跟最近的邊的距離當半徑
+            farthest-corner 跟最遠的角的距離當半徑
+            farthest-side 跟最遠的邊的距離當半徑
+            */
+            /* background-image: radial-gradient(circle 50px at 450px 50px, red, orange); */
+            background-image: radial-gradient(circle closest-corner at 450px 50px, red, orange);
+        }
+
+
+        #div6 {
+            width: 300px;
+            height: 300px;
+            /* 和repating-linear-gradient的語法相似 */
+            background-image: repeating-radial-gradient(black, grey 40px);
+            /* 如果用repeating，就不能讓起迄位置加起來到100%，否則沒有repeating的效果 */
+            /* background-image: repeating-radial-gradient(grey 0%, grey 40%, black 40%, black 50%); */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+</body>
+
+</html>
