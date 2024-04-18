@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 300px;
+            height: 300px;
+            background-image: conic-gradient(red, orange);
+        }
+
+        #div2 {
+            width: 300px;
+            height: 300px;
+            /* 可以在顏色後設定角度或%控制什麼位置開始漸變 */
+            /* background-image: conic-gradient(red 270deg, orange); */
+            background-image: conic-gradient(red 70%, orange);
+        }
+
+        #div3 {
+            width: 300px;
+            height: 300px;
+            /* background-image: conic-gradient(red 270deg, orange); */
+            background-image: conic-gradient(red 50%, orange 50%);
+        }
+
+        #div4 {
+            width: 300px;
+            height: 300px;
+            /* at 設定圓心位置位置 */
+            background-image: conic-gradient(at right 150px, black, orange);
+        }
+
+        #div5 {
+            width: 300px;
+            height: 300px;
+            /* from 設定第一個顏色開始的角度 */
+            background-image: conic-gradient(from 90deg, red, orange);
+        }
+
+        #div6 {
+            width: 300px;
+            height: 300px;
+            background-image: repeating-conic-gradient(from 45deg at 270px 50px, black 0deg, black 22.5deg, white 30deg, white 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+    <div id="div6"></div>
+</body>
+
+</html>
