@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cat {
+            width: 545px;
+            height: 480px;
+            background-image: url(./cat.png);
+            /* steps(數字,jumpterm)，數字是根據素材來調整 */
+            animation: move .7s steps(8, end) infinite;
+        }
+
+        @keyframes move {
+            0% {
+                /* 從原點出發 */
+                background-position: 0 0;
+            }
+
+            100% {
+                /* 負數代表將圖片往後拉，產生出圖片從左往右的錯覺 */
+                background-position: -4360px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cat"></div>
+</body>
+
+</html>
