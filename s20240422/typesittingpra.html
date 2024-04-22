@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .nav {
+            /* 使用padding-top可以將內部的.nav-container往下推，在.nav-container放入margin-top也能在客戶端呈現一樣的結果 */
+            padding-top: 10px;
+            background-color: grey;
+        }
+
+        .row {
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .nav-container {
+            background-color: aqua;
+            width: 100%;
+            margin: 15px;
+        }
+
+        .content {
+            float: left;
+            width: 33%;
+        }
+
+        .card {
+            /* background-color: blue; */
+            width: 100%;
+            height: 50vh;
+        }
+
+        .card-img {
+            width: 80%;
+            height: 70%;
+            background-color: white;
+            border: 1px white solid;
+            border-radius: 15%;
+            margin: auto;
+            position: relative;
+        }
+
+        .card-img>img {
+            /* 因應圖片變形所做的調整，讓圖片能佔.card-img的100% */
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img>img:hover {
+            width: 102%;
+            height: 102%;
+            transition-duration: .5s;
+        }
+
+        .card-img>.logo {
+            position: absolute;
+            width: 10%;
+            height: 10%;
+            top: 0;
+            right: 20px;
+        }
+
+        .card-img>.logo:hover {
+            width: 20%;
+            height: 20%;
+            transition-duration: .5s;
+        }
+
+        .card-text {
+            padding-top: 20px;
+            padding-left: 10px;
+            width: 80%;
+            height: 50%;
+            margin: auto;
+            border: 1px black solid;
+            border-radius: 15%;
+            background-color: black;
+            color: white;
+        }
+
+        .card-text:hover {
+            font-size: larger;
+            background-color: white;
+            color: black;
+            width: 90%;
+            height: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="row">
+            <div class="nav-content">
+                <img src="./image/nav.png" alt="">
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="content">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./image/row101.png" alt="">
+                            <img src="./image/img03.png" alt="" class="logo">
+                        </div>
+
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quaerat architecto commodi
+                            laborum veniam porro libero ex distinctio obcaecati doloribus, quos mollitia ab a quia nobis
+                            possimus hic perferendis est?
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./image/row103.png" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quaerat architecto commodi
+                            laborum veniam porro libero ex distinctio obcaecati doloribus, quos mollitia ab a quia nobis
+                            possimus hic perferendis est?
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="./image/row102.png" alt="">
+                        </div>
+
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quaerat architecto commodi
+                            laborum veniam porro libero ex distinctio obcaecati doloribus, quos mollitia ab a quia nobis
+                            possimus hic perferendis est?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
