@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            clear: both;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .nav-container {
+            background-color: aqua;
+            width: 100%;
+        }
+
+        .container-content {
+            background-color: beige;
+        }
+
+        .container31 {
+            background-color: blue;
+            width: 25%;
+            float: left;
+        }
+
+        .container32 {
+            background-color: palegoldenrod;
+            width: 25%;
+            float: left;
+        }
+
+        .container33 {
+            background-color: aliceblue;
+            width: 25%;
+            float: left;
+        }
+
+        .container34 {
+            background-color: black;
+            width: 25%;
+            float: right;
+        }
+
+        .container41 {
+            background-color: purple;
+            width: 33%;
+            float: left;
+        }
+
+        .container42 {
+            background-color: aliceblue;
+            width: 33%;
+            float: left;
+        }
+
+        .container43 {
+            background-color: aquamarine;
+            width: 33%;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 口訣：container>row>content，這樣排版的好處是維護更容易，也更乾淨，過幾個月後再回來看會比較知道各區塊在幹嘛 -->
+    <div class="nav">
+        <div class="row">
+            <div class="nav-content">
+                <img src="./image/nav.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="container-content">
+                <img src="./image/img01.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="container-content container31">
+                <img src="./image/row101.png" alt="">
+            </div>
+            <div class="container-content container32">
+                <img src="./image/row102.png" alt="">
+            </div>
+            <div class="container-content container33">
+                <img src="./image/row103.png" alt="">
+            </div>
+            <div class="container-content container33">
+                <img src="./image/row104.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="container-content container41">
+                <img src="./image/row201.png" alt="">
+            </div>
+            <div class="container-content container42">
+                <img src="./image/row202.png" alt="">
+            </div>
+            <div class="container-content container43">
+                <div class="container-content container431">
+                    <img src="./image/row203-1.png" alt="">
+                </div>
+                <div class="container-content container432">
+                    <img src="./image/row203-2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
