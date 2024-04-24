@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* 一開始先設可以更直觀了解是否破版 */
+            /* overflow: hidden; */
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .box1 {
+            background-color: lightblue;
+            overflow: hidden;
+        }
+
+        .box2 {
+            background-color: lightpink;
+            overflow: scroll;
+            /* 一般用auto較多，會自動偵測內容大小來決定是否要用scroll */
+            /* overflow: auto; */
+        }
+
+        .box3 {
+            background-color: lightgreen;
+            /* overflow: auto; */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .box3>img {
+            /* 如果不使用background-image而想要圖的特定部分，只能用position慢慢調 */
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            /* 用width：100%就直接滿版 */
+            /* width: 100%; */
+        }
+
+        .box4 {
+            background-color: red;
+            background-image: url('https://picsum.photos/id/10/200/300');
+            background-size: cover;
+            /* background-position設置背景圖的起始位置，能直接以此方法得到圖的特定部分 */
+            background-position: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- box1 hidden -->
+    <div class="box box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eum itaque, modi ut iure quasi alias quo
+        placeat maxime dolorem. Iste fugiat excepturi tempora laboriosam quo incidunt, ut dolorem ratione.
+        Maiores distinctio sequi qui dolores quos beatae, vitae nemo possimus dignissimos numquam ratione atque? Itaque,
+        cumque officia nisi explicabo veniam ratione quaerat, maiores, amet ut facere molestias cupiditate odio et.
+        Accusamus neque dolore sapiente tenetur nulla eveniet commodi dolor dolorem iure, explicabo porro consectetur
+        delectus distinctio perspiciatis. Dolores praesentium corrupti obcaecati pariatur consequatur unde non harum
+        enim, ad incidunt nulla!
+        Modi dolorum harum voluptate dolor eos praesentium vel libero similique dolorem quae. Enim fugit quisquam
+        consequuntur vitae delectus placeat voluptas quae incidunt obcaecati reprehenderit, odio temporibus, ullam
+        cumque consectetur reiciendis!
+    </div>
+
+    <!-- box2 scroll -->
+    <div class="box box2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis eum itaque, modi ut iure quasi alias quo
+        placeat maxime dolorem. Iste fugiat excepturi tempora laboriosam quo incidunt, ut dolorem ratione.
+        Maiores distinctio sequi qui dolores quos beatae, vitae nemo possimus dignissimos numquam ratione atque? Itaque,
+        cumque officia nisi explicabo veniam ratione quaerat, maiores, amet ut facere molestias cupiditate odio et.
+        Accusamus neque dolore sapiente tenetur nulla eveniet commodi dolor dolorem iure, explicabo porro consectetur
+        delectus distinctio perspiciatis. Dolores praesentium corrupti obcaecati pariatur consequatur unde non harum
+        enim, ad incidunt nulla!
+        Modi dolorum harum voluptate dolor eos praesentium vel libero similique dolorem quae. Enim fugit quisquam
+        consequuntur vitae delectus placeat voluptas quae incidunt obcaecati reprehenderit, odio temporibus, ullam
+        cumque consectetur reiciendis!
+    </div>
+
+    <!-- box3 -->
+    <div class="box box3">
+        <img src="https://picsum.photos/id/10/200/300" alt="">
+
+    </div>
+    <!-- box4 -->
+    <div class="box box4">
+
+    </div>
+</body>
+
+</html>
