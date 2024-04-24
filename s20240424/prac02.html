@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: lightgray;
+
+        }
+
+        .main {
+            margin: auto;
+            background-color: white;
+            height: 95vh;
+            width: 80vw;
+            border: 10px black solid;
+            border-style: double;
+        }
+
+        .container {
+            width: 80%;
+            /* height: 20%; */
+            margin: auto;
+        }
+
+        .content1 {
+            margin-top: 50px;
+            /* background-color: red; */
+            text-align: center;
+        }
+
+        .content1>img {
+            width: 30%;
+        }
+
+        .content2 {
+            /* background-color: lightpink; */
+            margin-top: 20px;
+            border-top: 5px solid black;
+            border-bottom: 3px solid grey;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .content3 {
+            margin-top: 30px;
+            /* background-color: lightblue; */
+            text-align: center;
+
+        }
+
+        .content3>img {
+            width: 80%;
+        }
+
+        .content4 {
+            /* background-color: lightgreen; */
+            margin-top: 30px;
+            text-align: justify;
+        }
+
+        .content2>ul>li {
+            display: inline-block;
+            margin-right: 10%;
+        }
+
+        .content2>ul>li>a {
+            text-decoration: none;
+        }
+
+        .content2>ul>li>a:hover {
+            font-size: x-large;
+            color: red;
+            text-shadow: #FC0 1px 0 10px;
+        }
+
+        .content2>ul>li>a:hover span {
+            display: none;
+        }
+
+        .content2>ul>li>a.bye:hover::after {
+            content: "bye";
+        }
+
+        .content2>ul>li>a.getout:hover::after {
+            content: "get out";
+        }
+
+        .content2>ul>li>a.go:hover::after {
+            content: "just go";
+        }
+
+        .content2>ul>li>a.soldout:hover::after {
+            content: "sold out";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container content1">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="container content2">
+            <ul>
+                <li><a class="bye" href=""><span>Home</span></a></li>
+                <li><a class="getout" href=""><span>For Sale</span></a></li>
+                <li><a class="go" href=""><span>Repairs</span></a></li>
+                <li><a href="">About</a></li>
+                <li><a class="soldout" href=""><span>Contact</span></a></li>
+            </ul>
+        </div>
+        <div class="container content3">
+            <img src="./images/p1.png" alt="">
+        </div>
+        <div class="container content4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptatem perferendis laboriosam officia
+            fugiat architecto quaerat illo commodi, rerum rem maiores aliquid assumenda reprehenderit, distinctio,
+            consequuntur porro itaque illum voluptatibus!
+            Consectetur quas amet unde nulla corporis debitis quo, natus impedit ipsa perferendis quae porro tempora
+            aperiam, eligendi veniam explicabo nam nisi voluptas quod placeat ipsam quasi ex odio! Placeat, doloremque.
+            Neque eaque id illo labore ipsa vitae, iste atque earum doloremque sequi sapiente nesciunt dolorem deserunt
+            pariatur distinctio doloribus esse nostrum modi omnis. Delectus dolores, obcaecati dicta numquam qui ex?
+        </div>
+    </div>
+</body>
+
+</html>
