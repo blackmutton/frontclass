@@ -37,6 +37,7 @@
             text-align: center;
             /* 要將padding註解，否則在border-box的前提下會壓縮到圖片 */
             /* padding: 30px; */
+            transition: .3s;
         }
 
         .item-hide {
@@ -54,6 +55,13 @@
             text-align: center;
             padding-top: 100px;
             background-color: lightgray;
+        }
+
+        .item:hover {
+            width: 35%;
+            height: 250px;
+            transition: .3s;
+            z-index: 10px;
         }
     </style>
 </head>
