@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* header */
+.header {
+    width: 1024px;
+    height: 65px;
+    /* background-color: lightblue; */
+    margin: auto;
+    border: 1px black solid;
+    border-bottom:0;
+    
+}
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 1024px;
+    /* calc()內一定要用空格，否則計算不會生效 */
+    height: calc(768px - 65px - 20px);
+    /* background-color: lightgrey; */
+    margin: auto;
+    
+    
+}
+
+
+
+.aside {
+    width: 215px;
+    height: calc(768px - 65px - 20px);
+    /* background-color: aqua; */
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.aside-header {
+    width: 215px;
+    flex-basis: calc(100% - 25px);
+    /* height: calc(100% - 25px); */
+    /* background-color: blueviolet; */
+    border: 1px black solid;
+    border-bottom:0;
+    border-right:0;
+    
+
+}
+
+.aside-footer {
+    width: 215px;
+    /* height: 25px; */
+    flex-basis: 25px;
+    /* background-color: lightpink; */
+    border: 1px solid black;
+    border-right:0;
+    
+}
+
+/* main */
+.main {
+    /* width: 770px; */
+    width: calc(1024px - 215px);
+    height: calc(768px - 65px - 20px);
+    /* background-color: blue; */
+    
+}
+
+.main-header {
+    /* width: 770px; */
+    height: 29px;
+    /* background-color: lightpink; */
+    border: 1px black solid;
+    border-bottom:0;
+
+
+}
+
+.main-section {
+    /* width: 770px; */
+    height: calc(100% - 29px);
+    /* background-color: lightskyblue; */
+    border: 1px black solid;
+
+    
+
+}
+/* footer */
+.footer {
+    width: 1024px;
+    height: 20px;
+    /* background-color: lightgreen; */
+    margin: auto;
+    border: 1px black solid;
+    /* 如果把over-flow註解掉的話，footer上面的邊框會對不上，因此需多加border-top:0 */
+    /* border-top:0; */
+    
+    
+}

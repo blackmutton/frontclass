@@ -3,40 +3,29 @@
     overflow: hidden;
 }
 
-/* header */
 .header {
     width: 1024px;
     height: 65px;
-    background-color: lightblue;
+    /* background-color: lightskyblue; */
     margin: auto;
-    text-align: center;
+    border: 1px black solid;
+    border-bottom: 0;
 }
 
-/* container */
 .container {
+    width: 1024px;
+    height: calc(768px - 65px - 20px);
+    /* background-color: aqua; */
+    margin: auto;
+
     display: flex;
     flex-direction: row;
-    width: 1024px;
-    /* calc()內一定要用空格，否則計算不會生效 */
-    height: calc(768px - 65px - 25px);
-    background-color: lightgrey;
-    margin: auto;
-    text-align: center;
-}
-
-/* footer */
-.footer {
-    width: 1024px;
-    height: 20px;
-    background-color: lightgreen;
-    margin: auto;
-    text-align: center;
 }
 
 .aside {
     width: 215px;
     height: calc(768px - 65px - 20px);
-    /* background-color: aqua; */
+    /* background-color: blueviolet; */
 
     display: flex;
     flex-direction: column;
@@ -44,35 +33,52 @@
 
 .aside-header {
     width: 215px;
-    height: calc(100% - 25px);
-    background-color: blueviolet;
+    flex-basis: calc(100% - 25px);
+    /* background-color: blanchedalmond; */
+    border: 1px black solid;
+    border-right: 0;
+    border-bottom: 0;
 }
 
 .aside-footer {
     width: 215px;
-    /* height: 20px; */
-    flex-basis: 20px;
-    background-color: lightpink;
+    flex-basis: 25px;
+    /* background-color: lightskyblue; */
+    border: 1px black solid;
+    border-right: 0;
 }
 
-/* main */
 .main {
-    /* width: 770px; */
     width: calc(1024px - 215px);
-    height: calc(768px - 65px - 25px);
-    background-color: blue;
+    height: calc(768px - 65px - 20px);
+    /* background-color: lightblue; */
+
+    display: flex;
+    flex-direction: column;
 }
 
 .main-header {
-    /* width: 770px; */
-    height: 29px;
-    background-color: lightpink;
-
+    /* width: calc(1024px - 215px); */
+    /* height:29px; */
+    flex-basis: 29px;
+    /* background-color: lightgreen; */
+    border: 1px black solid;
+    border-bottom: 0;
 }
 
 .main-section {
-    /* width: 770px; */
-    height: calc(100% - 29px);
-    background-color: lightskyblue;
+    /* width: calc(1024px - 215px); */
+    flex-basis: calc(768px - 29px);
+    /* background-color: lightpink; */
+    border: 1px black solid;
+}
 
+
+.footer {
+    width: 1024px;
+    height: 20px;
+    /* background-color: lightgray; */
+    margin: auto;
+    border: 1px black solid;
+    border-top: 0;
 }
