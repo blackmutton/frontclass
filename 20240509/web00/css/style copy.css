@@ -3,102 +3,131 @@
     overflow: hidden;
 }
 
-/* header */
 .header {
     width: 1024px;
     height: 65px;
-    /* background-color: lightblue; */
+    /* background-color: lightskyblue; */
     margin: auto;
     border: 1px black solid;
-    border-bottom:0;
-    
+    border-bottom: 0;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
 }
 
-/* container */
 .container {
-    display: flex;
-    flex-direction: row;
     width: 1024px;
     /* calc()內一定要用空格，否則計算不會生效 */
     height: calc(768px - 65px - 20px);
-    /* background-color: lightgrey; */
+    /* background-color: aqua; */
     margin: auto;
-    
-    
+
+    display: flex;
+    flex-direction: row;
 }
-
-
 
 .aside {
     width: 215px;
     height: calc(768px - 65px - 20px);
-    /* background-color: aqua; */
+    /* background-color: blueviolet; */
 
     display: flex;
     flex-direction: column;
-    
-    
 }
 
 .aside-header {
     width: 215px;
     flex-basis: calc(100% - 25px);
-    /* height: calc(100% - 25px); */
-    /* background-color: blueviolet; */
+    /* background-color: blanchedalmond; */
     border: 1px black solid;
-    border-bottom:0;
-    border-right:0;
-    
+    border-right: 0;
+    border-bottom: 0;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aside-header>.aside-title {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: '標楷體';
+    color: #FF00FF;
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 8px;
+
+    border-bottom: 2px black solid;
+    /* text-decoration: underline black;
+    text-underline-offset: 5px; */
+}
+
+.aside-header>.box {
+    width: 200px;
+    height: 35px;
+    /* background-color: aqua; */
+    background-image: url('../17300-104301/images/menu1.png');
+    margin-top: 10px;
+
+    font-size: 16px;
+    font-family: '標楷體';
+    text-align: center;
+    color: #000000;
+    padding-top: 8px;
+}
+
+.aside-header>.box:hover {
+    background-image: url(../17300-104301/images/menu2.png);
 }
 
 .aside-footer {
     width: 215px;
-    /* height: 25px; */
     flex-basis: 25px;
-    /* background-color: lightpink; */
-    border: 1px solid black;
-    border-right:0;
-    
+    /* background-color: lightskyblue; */
+    border: 1px black solid;
+    border-right: 0;
 }
 
-/* main */
 .main {
-    /* width: 770px; */
     width: calc(1024px - 215px);
     height: calc(768px - 65px - 20px);
-    /* background-color: blue; */
-    
+    /* background-color: lightblue; */
+
+    display: flex;
+    flex-direction: column;
 }
 
 .main-header {
-    /* width: 770px; */
-    height: 29px;
-    /* background-color: lightpink; */
+    /* width: calc(1024px - 215px); */
+    /* height:29px; */
+    flex-basis: 29px;
+    /* background-color: lightgreen; */
     border: 1px black solid;
-    border-bottom:0;
+    border-bottom: 0;
+}
 
-
+.marquee {
+    font-family: '標楷體';
+    width: 770px;
+    height: 29px;
+    color: #0000FF;
+    font-size: x-large;
 }
 
 .main-section {
-    /* width: 770px; */
-    height: calc(100% - 29px);
-    /* background-color: lightskyblue; */
+    /* width: calc(1024px - 215px); */
+    flex-basis: calc(768px - 29px);
+    /* background-color: lightpink; */
     border: 1px black solid;
-
-    
-
 }
-/* footer */
+
+
 .footer {
     width: 1024px;
     height: 20px;
-    /* background-color: lightgreen; */
+    /* background-color: lightgray; */
     margin: auto;
     border: 1px black solid;
-    /* 如果把over-flow註解掉的話，footer上面的邊框會對不上，因此需多加border-top:0 */
-    /* border-top:0; */
-    
-    
+    border-top: 0;
 }
