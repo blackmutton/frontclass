@@ -18,6 +18,8 @@
     </p>
 
     <button type="button" id="myBtn">myBtn</button>
+    <!-- solid原則，單一功能功能，一個東西只做一個功能，已利未來維護、開發 -->
+    <button type="button" id="blueBtn">blueBtn</button>
     <script>
         // h1 ....red
     </script>
@@ -29,6 +31,9 @@
             })
             $('#myBtn').click(function () {
                 $('p').css('color', 'green');
+            })
+            $('#blueBtn').click(function () {
+                $('p').css('color', 'blue');
             })
 
         });
