@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: auto;
+            /* background-color: blue; */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .myBtn {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            font-size: x-large;
+        }
+
+        #black {
+            color: black;
+        }
+
+        #blue {
+            color: blue;
+        }
+
+        #red {
+            color: red;
+        }
+
+        #resultDiv {
+            font-size: 30px;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border-collapse: collapse;
+            /* border: 1px solid black; */
+        }
+
+        table {
+            margin: auto;
+            width: 50%;
+        }
+
+        th {
+            height: 30px;
+            /* background-color: lightblue; */
+        }
+
+        td {
+            width: 200px;
+            height: 200px;
+            /* background-color: red; */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <h1>color change</h1>
+    </header>
+    <div class="container">
+        <!-- 定義三個按鈕，使用data-*屬性存儲顏色、文本和圖片ID -->
+        <button class="myBtn" id="black" data-color="black" data-text="BLACK BTN" data-img="21"
+            data-local-img="pic01.jpg">black</button>
+        <button class="myBtn" id="blue" data-color="blue" data-text="BLUE BTN" data-img="25"
+            data-local-img="pic02.jpg">blue</button>
+        <button class="myBtn" id="red" data-color="red" data-text="RED BTN" data-img="26"
+            data-local-img="pic03.jpg">red</button>
+
+    </div>
+    <div class="container">
+        <div id="resultDiv">
+            hello<span id="resultSpan"> xxx </span>color
+        </div>
+    </div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <th>
+                    FileName=<span id="imgFileNameSpan">22.jpg</span>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <img id="myImg" src="https://picsum.photos/id/22/800/600" alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        // 方法一
+        $(document).ready(function () {
+            // 1.宣告
+            // jquery obj
+            const blueBtn = $('#blue');
+            const blackBtn = $('#black');
+            const redBtn = $('#red');
+            const myBtn = $('.myBtn');
+
+            const resultSpan = $('#resultSpan');
+
+            const myImg = $('#myImg');
+            const imgFileNameSpan = $('#imgFileNameSpan');
+            console.log('blueBtn', blueBtn);
+
+            // 原生js
+            // const blueBtnJs=document.getElenentById('blue');
+            // console.log('blueBtn', blueBtn);
+
+            // 2.動作 method/function
+
+            // 為所有按鈕綁定點擊事件
+            myBtn.click(function () {
+                // js
+                // console.log('this', this);
+
+                // 獲取當前按鈕
+                // jq
+                console.log('$(this)', $(this));
+                let nowBtn = $(this);
+
+                /* console.log('blackBtn ok');
+                resultSpan.text('BLACK'); */
+                // resultSpan.css('color', 'black');
+
+                // 獲取按鈕的data-color屬性並設置resultSpan的顏色
+                let getDataColor = nowBtn.attr('data-color');
+                console.log('getDataColor', getDataColor);
+                resultSpan.css('color', getDataColor);
+
+                // 獲取按鈕的data-text屬性並設置resultSpan的文本
+                let getDataText = nowBtn.attr('data-text');
+                console.log('getDataText', getDataText);
+                resultSpan.text(getDataText);
+
+                // 獲取按鈕的data-local-img屬性
+                let getDataLocalImg = nowBtn.attr('data-local-img');
+                console.log('getDataLocalImg', getDataLocalImg);
+
+                // 獲取按鈕的data-img屬性並構建圖片的URL
+                let getDataImg = nowBtn.attr('data-img');
+                let imgUrl = `https://picsum.photos/id/${getDataImg}/800/600`;
+                // 本地端圖片
+                // let imgUrl = `./images${getDataLocalImg}`;
+                console.log('imgUrl', imgUrl);
+
+                // 設置圖片的src屬性和文件名
+                myImg.attr('src', imgUrl);
+                imgFileNameSpan.text(getDataLocalImg);
+
+            })
+
+
+        });
+    </script>
+</body>
+
+</html>
