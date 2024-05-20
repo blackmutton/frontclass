@@ -77,6 +77,7 @@
             // console.log('blueBtn', blueBtn);
 
             // 2.動作 method/function
+            // 直接設定全按鈕的點擊動作
             myBtn.click(function () {
                 // js
                 console.log('this', this);
@@ -97,42 +98,8 @@
                 resultSpan.text(getDataText);
 
             })
-            blueBtn.click(function () {
-                // js
-                console.log('this', this);
-                // jq
-                console.log('$(this)', $(this));
-                let nowBtn = $(this);
-                /* console.log('blueBtn ok');
-                resultSpan.text('BLUE'); */
-                // resultSpan.css('color', 'blue');
-
-
-                let getDataColor = nowBtn.attr('data-color');
-                console.log('getDataColor', getDataColor);
-                resultSpan.css('color', getDataColor);
-                let getDataText = nowBtn.attr('data-text');
-                console.log('getDataText', getDataText);
-                resultSpan.text(getDataText);
-
-
-            })
-            redBtn.click(function () {
-                // js
-                console.log('this', this);
-                // jq
-                console.log('$(this)', $(this));
-                let nowBtn = $(this);
-                /* console.log('redBtn ok');
-                resultSpan.text('RED'); */
-                // resultSpan.css('color', 'red');
-                let getDataColor = nowBtn.attr('data-color');
-                console.log('getDataColor', getDataColor);
-                resultSpan.css('color', getDataColor);
-                let getDataText = nowBtn.attr('data-text');
-                console.log('getDataText', getDataText);
-                resultSpan.text(getDataText);
-            })
+            
+            
 
         });
     </script>
