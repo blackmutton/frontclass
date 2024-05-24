@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版練習</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- 練習1=> logo在左，選單在右 -->
+    <div class="container-fluid">
+        <div class="row justify-content-lg-between bg-black">
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a href="#" class="nav-link">overview page</a>
+                </nav>
+            </div>
+
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a href="#" class="nav-link"><i class="bi bi-phone" style="font-size: 1.5rem;color: red;"></i></a>
+                    <a href="#" class="nav-link"><i class="bi bi-tablet" style="font-size: 1.5rem;color: red;"></i></a>
+                    <a href="#" class="nav-link"><i class="bi bi-pc-display-horizontal"
+                            style="font-size: 1.5rem;color: red;"></i></a>
+                </nav>
+            </div>
+
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a href="#" class="nav-link">1</a>
+                    <a href="#" class="nav-link"><button class="btn btn-primary">free download</button></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>justify-content 分配空間</h1>
+        <div class="row justify-content-lg-between">
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a class="nav-link" href="#">Clean Blog</a>
+                </nav>
+            </div>
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a class="nav-link" href="#">HOME</a>
+                    <a class="nav-link" href="#">ABOUT</a>
+                    <a class="nav-link" href="#">POSTS</a>
+                    <a class="nav-link" href="#">CONTACT</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>margin可以推擠空間</h1>
+        <div class="row">
+            <!-- .ms-auto => margin-left: auto，BS4 ml-auto -->
+            <!-- .me-auto => margin-right: auto，BS4 mr-auto -->
+            <div class="col-lg-auto me-auto">
+                <nav class="nav">
+                    <a href="#" class="nav-link">clean blog</a>
+                </nav>
+            </div>
+
+            <div class="col-lg-auto">
+                <nav class="nav">
+                    <a href="#" class="nav-link">home</a>
+                    <a href="#" class="nav-link">about</a>
+                    <a href="#" class="nav-link">posts</a>
+                    <a href="#" class="nav-link">contact</a>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <!-- 練習2 =>xs 1欄，md 2欄， lg 3欄， xl 第一個欄位內容寬度 ，其餘兩欄平均分配 -->
+    <div class="container">
+        <h2>練習2</h2>
+        <div class="row bg-black">
+            <div class="col-12 col-md-6 col-lg-4 col-xl-auto bg-primary">1</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl bg-info">2</div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl bg-warning">3</div>
+        </div>
+    </div>
+
+    <!-- 練習2改 =>xs 1欄，md 2欄， lg 3欄， xl 4欄 -->
+    <div class="container">
+        <h1>練習2改</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+            <div class="col-md-6 col-lg-4 col-xl-3">col</div>
+        </div>
+    </div>
+
+    <script src="./js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
