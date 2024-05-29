@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <style>
+        /* 為按鈕做hover效果 */
+        .btn {
+            transition: 0.3;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            transition: 0.3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center mb-3">Song List</h1>
+        <div class="row">
+            <!-- songBtn1 -->
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <button id="songBtn1" class="btn btn-primary songBtn" data-id="#row1" type="button">They're Only
+                        Human</button>
+                </div>
+            </div>
+            <!-- songBtn2 -->
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <button id="songBtn2" class="btn btn-warning songBtn" data-id="#row2" type="button">Monster</button>
+                </div>
+            </div>
+            <!-- songBtn3 -->
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <button id="songBtn3" class="btn btn-danger songBtn" data-id="#row3" type="button">Wolf in sheep's
+                        clothing</button>
+                </div>
+            </div>
+            <!-- songBtn4 -->
+            <div class="col">
+                <div class="d-grid gap-2">
+                    <button id="songBtn4" class="btn btn-dark songBtn" data-id="#row4" type="button">smiling when i
+                        die</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- spinner -->
+        <div class="container mt-5 text-center">
+            <div class="spinner-border" id="spinner"></div>
+        </div>
+
+        <!-- 歌詞開始 -->
+        <div class="container mt-3" id="container-song">
+            <!-- row1 -->
+            <div class="row" id="table1">
+                <div class="col-sm-12 col-lg-12 fs-1 mb-3 text-center">
+                    They're Only Human
+
+                </div>
+                <div class="col-sm-12 col-lg-12 mb-3">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-block btn-outline-primary fs-2"><a
+                                href="https://youtu.be/AyNFC-6ijWU?si=gU53huXuvS1mGi8z">Youtube</a></button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <img src="./images/deathnote.jpg" alt="" class="container-fluid">
+                </div>
+                <div class="col-sm-12 col-lg-6 fs-3">
+                    Look at how they crawl around <br>
+                    Upon the ground like little ants <br>
+                    Yes, but how they fascinate, confusing fate <br>
+                    With what is merely chance <br>
+                    Isn't it a laugh? (Isn't it a shame?) <br>
+                    Thinking there is someone in heaven to blame <br>
+                    Yes, but even while blaming fate for the lives that they lead <br>
+                    They hope for the lives that they need <br>
+                    Living every day 'til the day they die <br>
+                    Never getting answers (yet still asking, "Why?") <br>
+                    Going through the motions as if there will be a reward <br>
+                    While we stay eternally bored! <br>
+                    They're only human <br>
+                    They don't see, who they are is who they'll always be <br>
+                    Only human, after all <br>
+                    So they push and they shove <br>
+                    With this thing they call love, 'til they fall! <br>
+                    Isn't it a farce? (Isn't it a waste?) <br>
+                    Struggling to face what can never be faced <br>
+                    Yes, but maybe death can release something more than we share <br>
+                    I really don't know and don't care <br>
+                    They're only human <br>
+                    Standing still <br>
+                    Doomed to live pushing boulders uphill <br>
+                    Only human, after all, so they give and they take <br>
+                    Hoping someone will help break their fall <br>
+                    They will pray, curse, live, die <br>
+                    Never knowing their truth is another man's lie <br>
+                    Eat, sleep, love, hate, like a leaf blowing in the wind <br>
+                    Watch them all vacillate! <br>
+                    They're only human <br>
+                    They can't see <br>
+                    All the years they could give you and me <br>
+                    Only human, after all <br>
+                    So they give and they take <br>
+                    'Til their silly hearts break <br>
+                    Looking down from above <br>
+                    I'm intrigued by their love <br>
+                    So let's call <br>
+                    Let's call! <br>
+                </div>
+            </div>
+            <!-- row2 -->
+            <div class="row" id="table2">
+                <div class="col-sm-12 col-lg-12 fs-1 mb-3 text-center">
+                    Monster
+
+                </div>
+                <div class="col-sm-12 col-lg-12 mb-3">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-block btn-outline-warning fs-2"><a
+                                href="https://youtu.be/VIL9GOje_Ds?si=MddMMw404VEetTzN">Youtube</a></button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <img src="./images/epic.jpg" alt="" class="container-fluid">
+                </div>
+                <div class="col-sm-12 col-lg-6 fs-3">
+                    [ODYSSEUS] <br>
+                    How has everything been turned against us? <br>
+                    How did suffering become so endless? <br>
+                    How am I to reunite with my estranged? <br>
+                    Do I need to change? <br>
+                    <br>
+                    I'm surrounded by the souls of those I've lost <br>
+                    I'm the only one whose line I haven't crossed <br>
+                    What if the greatest threat we'll find across the sea <br>
+                    Is me? <br>
+                    What if I'm the monster? <br>
+                    What if I'm in the wrong? <br>
+                    What if I'm the problem that's been hiding all along? <br>
+                    What if I'm the one who killed you <br>
+                    Every time I caved to guilt? <br>
+                    What if I've been far too kind to foes <br>
+                    But a monster to ourselves? <br>
+                    What if I'm the monster? <br>
+                    <br>
+                    Is the cyclops struck with guilt when he kills? <br>
+                    Is he up in the middle of the night? <br>
+                    Or does he end my men to avenge his friend <br>
+                    And then sleep knowing he has done him right? <br>
+                    <br>
+                    When the witch turns men to pigs to protect her nymphs is she going insane? <br>
+                    Or did she learn to be colder when she got older and now she saves them the pain? <br>
+                    When a god comes down and makes a fleet drown <br>
+                    Is he scared that he's doing something wrong? <br>
+                    Or does he keep us in check so we must respect him <br>
+                    And now no one dares to piss him off? <br>
+                    Does a soldier use a wooden horse to kill sleeping Trojans 'cause he is vile? <br>
+                    Or does he throw away his remorse and save more lives with guile? <br>
+                    <br>
+                    If I became the monster, and threw that guilt away <br>
+                    Would that make us stronger? <br>
+                    Would it keep our foes at bay? <br>
+                    If I became the monster to everyone but us <br>
+                    And made sure we got home again <br>
+                    Who would care if we're unjust? <br>
+                    If I became the <br>
+                    <br>
+                    [SOLDIERS] <br>
+                    Monster <br>
+                    <br>
+                    [ODYSSEUS] <br>
+                    Oh, ruthlessness is mercy upon ourselves <br>
+                    <br>
+                    [SOLDIERS] <br>
+                    Monster <br>
+                    <br>
+                    [ODYSSEUS] <br>
+                    And deep down I know this well <br>
+                    I lost my best friend <br>
+                    I lost my mentor, my mom <br>
+                    Five hundred men gone, this can't go on <br>
+                    I must get to see Penelope and Telemachus <br>
+                    So if we must sail through dangerous oceans and beaches <br>
+                    I'll go where Poseidon won't reach us <br>
+                    And if I gotta drop another infant from a wall <br>
+                    In an instant so we all don't die <br>
+                    <br>
+                    [ODYSSEUS, ALL] <br>
+                    Then I'll become the <br>
+                    Monster <br>
+                    I will deal the blow <br>
+                    And I'll become the <br>
+                    Monster <br>
+                    Like none they've ever known <br>
+                    So what if I'm the <br>
+                    Monster <br>
+                    Lurking deep below? <br>
+                    I must become the <br>
+                    Monster <br>
+                    And then we'll make it home <br>
+                    <br>
+                    Monster <br>
+                    Penelope <br>
+                    Monster <br>
+                    Telemachus <br>
+                    Monster <br>
+                    Oh, ruthlessness is mercy upon ourselves <br>
+                    Monster <br>
+                    I'll become the monster <br>
+                </div>
+            </div>
+            <!-- row3 -->
+            <div class="row" id="table3">
+                <div class="col-sm-12 col-lg-12 fs-1 mb-3 text-center">
+                    Wolf in sheep's clothing
+                </div>
+                <div class="col-sm-12 col-lg-12 mb-3">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-block btn-outline-danger fs-2"><a
+                                href="https://youtu.be/1KBfl-2mvxA?si=jqnxsiCixHxIzpxV">Youtube</a></button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <img src="./images/setitoff.jpg" alt="" class="container-fluid">
+                </div>
+                <div class="col-sm-12 col-lg-6 fs-3">
+                    This is about you <br>
+                    Beware, beware, be skeptical <br>
+                    Of their smiles, their smiles of plated gold <br>
+                    Deceit, so natural <br>
+                    But a wolf in sheep's clothing is more than a warning <br>
+                    Baa, baa, black sheep, have you any soul? <br>
+                    No, sir, by the way, what the hell are morals? <br>
+                    Jack, be nimble, Jack, be quick <br>
+                    Jill's a little whore, and her alibis are turning tricks <br>
+                    So could you <br>
+                    Tell me how you're sleeping easy? <br>
+                    How you're only thinking of yourself? (Of yourself) <br>
+                    Show me how you justify <br>
+                    Telling all your lies like second nature <br>
+                    Listen, mark my words, one day (one day) <br>
+                    You will pay, you will pay <br>
+                    Karma's gonna come collect your debt <br>
+                    Aware, aware, you stalk your prey <br>
+                    With criminal mentality <br>
+                    You sink your teeth into the people you depend on <br>
+                    Infecting everyone, you're quite the problem <br>
+                    Fee-fi-fo-fum, better run and hide <br>
+                    I smell the blood of a petty little coward <br>
+                    Jack, be lethal, Jack, be slick (slick) <br>
+                    Jill will leave you lonely, dying in a filthy ditch <br>
+                    So, could you <br>
+                    Tell me how you're sleeping easy? <br>
+                    How you're only thinking of yourself? <br>
+                    Show me how you justify <br>
+                    Telling all your lies like second nature (oh) <br>
+                    Listen, mark my words, one day (one day) <br>
+                    You will pay, you will pay <br>
+                    Karma's gonna come collect your debt (maybe, one day) <br>
+                    Maybe you'll change (oh) <br>
+                    Abandon all your wicked ways (one day) <br>
+                    Make amends and start anew again <br>
+                    Maybe you'll see <br>
+                    All the wrongs you did to me (one day) <br>
+                    And start all over, start all over- <br>
+                    Oh my god, who am I kidding? <br>
+                    Now, let's not get overzealous here <br>
+                    You've always been a huge piece of shit <br>
+                    If I could kill you, I would, but it's frowned upon in all 50 states <br>
+                    Having said that, burn in hell <br>
+                    Yeah (where's the little fucker?) <br>
+                    Oh, oh, oh, oh <br>
+                    So, tell me how you're sleeping easy <br>
+                    How you're only thinking of yourself <br>
+                    Show me how you justify <br>
+                    Telling all your lies like second nature <br>
+                    Listen, mark my words, one day (one day) <br>
+                    You will pay, you will pay <br>
+                    Karma's gonna come collect your debt <br>
+                    (Fuck off) <br>
+                    Karma's gonna come collect your debt <br>
+                    (She's a li- she's a li- she's a liar) oh, oh, oh <br>
+                    Karma's gonna come collect your debt (Jazzy) <br>
+                </div>
+            </div>
+            <!-- row4 -->
+            <div class="row" id="table4">
+                <div class="col-sm-12 col-lg-12 fs-1 mb-3 text-center">
+                    Smiling when i die
+
+                </div>
+                <div class="col-sm-12 col-lg-12 mb-3">
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-block btn-outline-dark fs-2"><a
+                                href="https://youtu.be/d0ipbK7btxI?si=Q3Yeou-eDAbobths">Youtube</a></button>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <img src="./images/smile.jpg" alt="" class="container-fluid">
+                </div>
+                <div class="col-sm-12 col-lg-6 fs-3">
+                    Yesterday felt like my graduation <br>
+                    But now some of those kids have got their own <br>
+                    Been a while since I took a vacation <br>
+                    It's been a while since I really let go <br>
+                    Don't wanna look back <br>
+                    Thinking I could've done this <br>
+                    Or I could've tried that <br>
+                    Don't wanna look back <br>
+                    'Cause it's going by fast <br>
+                    I'ma call my mother <br>
+                    It's been a while since I've been home <br>
+                    Take a trip in the summer <br>
+                    See all the lights in Tokyo <br>
+                    Get lost in the desert <br>
+                    Just to see what I can find <br>
+                    So when it's my time, I <br>
+                    I'm smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                    Yesterday felt like my first day working <br>
+                    But now I'm not the youngest on the clock <br>
+                    Been a while since days were just for burning <br>
+                    It's been a while since I threw back a shot <br>
+                    Don't wanna look back <br>
+                    Thinking I could've done this <br>
+                    Or I could've tried that <br>
+                    Don't wanna look back <br>
+                    'Cause it's going by fast <br>
+                    I'ma call my mother <br>
+                    It's been a while since I've been home <br>
+                    Take a trip in the summer <br>
+                    See all the lights in Tokyo <br>
+                    Get lost in the desert <br>
+                    Just to see what I can find <br>
+                    So when it's my time, I <br>
+                    I'm smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                    There's been a couple times that I've fell in love <br>
+                    But a couple times just ain't enough <br>
+                    There's been a couple joints that I could've shared <br>
+                    But I guess I gotta start somewhere <br>
+                    I'ma call my mother <br>
+                    It's been a while since I've been home <br>
+                    Take a trip in the summer <br>
+                    See all the lights in Tokyo <br>
+                    Get lost in the desert <br>
+                    Just to see what I can find <br>
+                    So when it's my time, I <br>
+                    I'm smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                    Smiling when I die (when I die, when I die) <br>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- js or jqery -->
+    <script>
+
+        // 方法一
+        $(document).ready(function () {
+            const songBtn1 = $('#songBtn1');
+            const songBtn2 = $('#songBtn2');
+            const songBtn3 = $('#songBtn3');
+            const songBtn4 = $('#songBtn4');
+            console.log('songBtn1', songBtn1);
+            console.log('songBtn2', songBtn2);
+            console.log('songBtn3', songBtn3);
+            console.log('songBtn4', songBtn4);
+
+            const table1 = $('#table1');
+            const table2 = $('#table2');
+            const table3 = $('#table3');
+            const table4 = $('#table4');
+            const spinner = $('#spinner');
+
+            const songBtn = $('.songBtn');
+            const songRow = $('#container-song>.row');
+
+            songBtn.click(function () {
+                let nowBtn = $(this);
+                console.log('nowBtn', nowBtn);
+                let getDataID = $(this).attr('data-id');
+                console.log('getDataID', getDataID);
+                songRow.hide();
+
+
+                //  只有bootstrap可以這樣使用因為可以在data-id內加#，否則須以 $(`#${getDataID}`).show();來寫
+                $(getDataID).show();
+            });
+
+
+
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>
