@@ -29,27 +29,29 @@
             <!-- songBtn1 -->
             <div class="col">
                 <div class="d-grid gap-2">
-                    <button id="songBtn1" class="btn btn-primary songBtn" data-id="#row1" type="button">They're Only
+                    <!-- data-id一定要跟底下的id相符，否則無法綁定 -->
+                    <button id="songBtn1" class="btn btn-primary songBtn" data-id="#table1" type="button">They're Only
                         Human</button>
                 </div>
             </div>
             <!-- songBtn2 -->
             <div class="col">
                 <div class="d-grid gap-2">
-                    <button id="songBtn2" class="btn btn-warning songBtn" data-id="#row2" type="button">Monster</button>
+                    <button id="songBtn2" class="btn btn-warning songBtn" data-id="#table2"
+                        type="button">Monster</button>
                 </div>
             </div>
             <!-- songBtn3 -->
             <div class="col">
                 <div class="d-grid gap-2">
-                    <button id="songBtn3" class="btn btn-danger songBtn" data-id="#row3" type="button">Wolf in sheep's
+                    <button id="songBtn3" class="btn btn-danger songBtn" data-id="#table3" type="button">Wolf in sheep's
                         clothing</button>
                 </div>
             </div>
             <!-- songBtn4 -->
             <div class="col">
                 <div class="d-grid gap-2">
-                    <button id="songBtn4" class="btn btn-dark songBtn" data-id="#row4" type="button">smiling when i
+                    <button id="songBtn4" class="btn btn-dark songBtn" data-id="#table4" type="button">smiling when i
                         die</button>
                 </div>
             </div>
@@ -395,16 +397,24 @@
             const songBtn = $('.songBtn');
             const songRow = $('#container-song>.row');
 
+            spinner.hide();
+            songRow.hide();
+            table1.show();
+
             songBtn.click(function () {
+
                 let nowBtn = $(this);
                 console.log('nowBtn', nowBtn);
                 let getDataID = $(this).attr('data-id');
                 console.log('getDataID', getDataID);
-                songRow.hide();
+                spinner.show(1000);
+                songRow.hide(1000);
+                spinner.hide(1000);
+
 
 
                 //  只有bootstrap可以這樣使用因為可以在data-id內加#，否則須以 $(`#${getDataID}`).show();來寫
-                $(getDataID).show();
+                $(getDataID).show(1000);
             });
 
 
