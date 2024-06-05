@@ -19,12 +19,12 @@ class Race
         // 將public properties指定到括號的變數中
         $this->lifespan = $lifespan;
         $this->name = $name;
-        
+
         // 將private的method呼叫到public中以取用
         $this->intro();
     }
 
-    
+
     private function intro()
     {
         // 將上述的public properties呼叫到此method
@@ -38,7 +38,7 @@ class Race
     {
         $nowlifespan = $this->lifespan;
         $nowname = $this->name;
-        echo "注意事項：{$nowname}一族雖可活{$nowlifespan}年，但{$poison}對他們有致命性";
+        echo "注意事項：{$nowname}一族雖可活{$nowlifespan}年，但{$poison}對他們有致命性<br>";
     }
 }
 
