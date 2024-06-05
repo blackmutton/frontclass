@@ -51,16 +51,44 @@
                 const myText = $('.myText');
                 const startBtn = $('#startBtn');
                 const stopBtn = $('#stopBtn');
+
+                // 增加goFlag變數以控制程式運作不會出現連續按startBtn結果內容越跑越快的bug
+                let goFlag = true;
+
                 let myInterval;
 
 
                 startBtn.click(function () {
                     console.log('startBtn ok');
+
+                    // 方法一
+
+                    /*  if (goFlag) {
+ 
+                         myInterval = setInterval(() => {
+                             console.log('Hello');
+                             console.log('JS');
+                             myText.append('<br> my content ');
+                         }, 1000)
+                     } */
+
+                    // 方法二
+
+                    if (!goFlag) {
+                        // js的進階應用，傳回false值能讓直接跳出此迴圈，不再執行接下來的步驟，為可讀性建議使用(需放在上面)
+                        return false;
+                    }
+
                     myInterval = setInterval(() => {
                         console.log('Hello');
                         console.log('JS');
                         myText.append('<br> my content ');
                     }, 1000)
+
+
+
+                    // 需在if迴圈外設置，否則在裡面的話，一離開又會重置成true
+                    goFlag = false;
                 })
 
                 stopBtn.click(function () {
@@ -68,6 +96,9 @@
 
 
                     clearInterval(myInterval);
+
+                    // 在執行後回傳true，以讓startBtn能再執行
+                    goFlag = true;
 
                 })
 
