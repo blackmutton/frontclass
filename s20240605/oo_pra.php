@@ -9,14 +9,18 @@ function dd($data)
 // 定義物件共同點
 class Race
 {
-    // 定義共同可外部繼承且公開的properties
+    // 定義共同可外部繼承且可公開存取的properties
+
+    // properties
     public $lifespan;
     public $name;
+
+    // methods
 
     // 建構子:初始化種族的名稱、生命週期，是優先會執行的內容
     public function __construct($name, $lifespan)
     {
-        // 將public properties指定到括號的變數中
+        // 將括號的變數指定到public properties中
         $this->lifespan = $lifespan;
         $this->name = $name;
 
@@ -24,7 +28,8 @@ class Race
         $this->intro();
     }
 
-
+    // 種族基礎介紹
+    // private不可外部存取，也無法跟protected一樣被繼承
     private function intro()
     {
         // 將上述的public properties呼叫到此method
@@ -33,7 +38,8 @@ class Race
         echo "此人的種族是{$nowname}，壽命大約為{$nowlifespan} 年<br>";
     }
 
-    // 定義共同可外部繼承且公開的method
+    // 毒物弱點
+    // 定義共同可外部繼承且可公開存取的method
     public function poison($poison)
     {
         $nowlifespan = $this->lifespan;
@@ -42,14 +48,15 @@ class Race
     }
 }
 
-// 創立新物件
+// 創立新物件，且因__construct()中含有intro()，因此會優先開始介紹基本訊息
 $elf = new Race('精靈', 500);
 /* $elf->lifespan = '500';
 $elf->name = '精靈'; */
+
 // 列印出$elf物件中的properties
 dd($elf);
 
-// 將$elf中的資料帶入public method中
+// 將$elf中的資料帶入public method(毒物弱點)中
 // $elf->intro();
 $elf->poison('木炭');
 
