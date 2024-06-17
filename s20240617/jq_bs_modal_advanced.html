@@ -44,7 +44,7 @@
                             data-bs-target="#myModalEdit">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-danger">Del</button>
+                        <button type="button" class="btn btn-danger delBtn">Del</button>
 
                     </td>
                 </tr>
@@ -58,7 +58,7 @@
                             data-bs-target="#myModalEdit">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-danger">Del</button>
+                        <button type="button" class="btn btn-danger delBtn">Del</button>
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +70,7 @@
                             data-bs-target="#myModalEdit">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-danger">Del</button>
+                        <button type="button" class="btn btn-danger delBtn">Del</button>
 
                     </td>
                 </tr>
@@ -158,8 +158,25 @@
     <!-- js or jqery -->
     <script>
 
-
+        // js的del防呆設計
         $(document).ready(function () {
+            const delBtn = $('.delBtn');
+
+            delBtn.click(function () {
+                if (confirm("del?")) {
+                    console.log('刪除成功');
+                } else {
+                    console.log('取消刪除');
+                    // 直接跳出，不再執行底下的程式
+                    return false;
+                }
+
+                // 上面程式的進階改寫方法
+                /* if (!confirm("del?")) {
+                    return false;
+                } */
+                console.log('btn ok');
+            });
 
 
         });
