@@ -25,27 +25,11 @@
           <th>name</th>
           <th>mobile</th>
           <th>price</th>
+          <th>level</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>台北店</td>
-          <td>0911-111-111</td>
-          <td>10000</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>台中店</td>
-          <td>0922-222-222</td>
-          <td>50000</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>高雄店</td>
-          <td>0933-333-333</td>
-          <td>100000</td>
-        </tr>
+      <tbody id="mytbody">
+
       </tbody>
     </table>
   </div>
@@ -56,11 +40,59 @@
 
   <script>
     // 1.綁定 bind
-    let data = [
-      {
+    const mytbody = document.getElementById('mytbody');
+    console.log('mytbody', mytbody);
 
+    let resultText = ``;
+    let data = [
+
+      {
+        'id': 1,
+        'name': '台北店',
+        'mobile': '0911',
+        'price': 10000
       },
-    ]
+      {
+        'id': 2,
+        'name': '台中店',
+        'mobile': '0922',
+        'price': 5000
+      },
+      {
+        'id': 3,
+        'name': '高雄店',
+        'mobile': '0933',
+        'price': 100000
+      }
+    ];
+
+
+    data.forEach(function (value, key) {
+      console.log('key', key);
+      console.log('value', value);
+
+      value.price = value.price + 500;
+      // 客戶等級
+      let tmpLevel = 'B';
+      if (value.price > 100000) {
+        tmpLevel = 'S';
+      }
+
+
+      resultText += `
+                    <tr>
+                      <td>${value.id}</td>
+                      <td>${value.name}</td>
+                      <td>${value.mobile}</td>
+                      <td>${value.price}</td>
+                      <td>${tmpLevel}</td>
+                    </tr>
+      `;
+
+    });
+
+    mytbody.innerHTML = resultText;
+    console.log('data', data);
     // js foreach
 
     // ajax get data

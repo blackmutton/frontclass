@@ -29,6 +29,18 @@ $data = [
 ];
 
 dd($data);
+
+$tmp = $data;
+foreach ($tmp as $key => $value) {
+  $tmp[$key]['level'] = 'B';
+  if (($value['price'] + 500) > 100000) {
+    $tmp[$key]['level'] = 'S';
+  }
+  $tmp[$key]['price'] = $value['price'] + 500;
+  unset($tmp[$key]['price']);
+}
+
+dd($tmp);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,10 +77,10 @@ dd($data);
         foreach ($data as $key => $value) :
         ?>
           <tr>
-            <td><?=$value['id']?></td>
-            <td><?=$value['name']?></td>
-            <td><?=$value['mobile']?></td>
-            <td><?=$value['price']?></td>
+            <td><?= $value['id'] ?></td>
+            <td><?= $value['name'] ?></td>
+            <td><?= $value['mobile'] ?></td>
+            <td><?= $value['price'] ?></td>
           </tr>
         <?php
         endforeach;
