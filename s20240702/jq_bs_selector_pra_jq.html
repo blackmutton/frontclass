@@ -53,12 +53,38 @@
 
 
             // 先做id 再做class
-            redBtn.click(function () {
+           /*  redBtn.click(function () {
                 console.log('red ok');
 
                 let getDataColor = $(this).attr('data-color');
-                console.log('dataColor', getDataColor);
-            })
+                console.log('getDataColor', getDataColor);
+                let getDataPhoto = $(this).attr('data-photo');
+                console.log('getDataPhoto', getDataPhoto);
+                box.attr('class', `border text-center p-5 ${getDataColor}`);
+                let imgUrl = `https://picsum.photos/id/${getDataPhoto}/800/600`;
+                console.log('url',imgUrl);
+
+                myImg.attr('src',imgUrl);
+            }) */
+
+            myBtn.click(function () {
+                console.log('red ok');
+
+                let nowBtn=$(this);
+
+                let getDataColor = nowBtn.attr('data-color');
+                console.log('getDataColor', getDataColor);
+                let getDataPhoto = nowBtn.attr('data-photo');
+                console.log('getDataPhoto', getDataPhoto);
+                box.attr('class', `border text-center p-5 ${getDataColor}`);
+                let imgUrl = `https://picsum.photos/id/${getDataPhoto}/800/600`;
+                console.log('url',imgUrl);
+
+                myImg.attr('src',imgUrl);
+            }) 
+           
+
+            
         })
 
 
