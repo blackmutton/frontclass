@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <style>
+        #box {
+            width: 100%;
+            /* height: 50vh; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-3">
+        <h1 class="text-center mb-3">Photo</h1>
+        <div class="row text-center">
+            <div class="col">
+                <button id="redBtn" class="myBtn btn btn-danger" data-color="bg-danger" data-photo="20">Red</button>
+            </div>
+            <div class="col">
+                <button id="greenBtn" class="myBtn btn btn-success" data-color="bg-success"
+                    data-photo="21">Green</button>
+            </div>
+            <div class="col">
+                <button id="blueBtn" class="myBtn btn btn-primary" data-color="bg-primary" data-photo="22">Blue</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-3">
+        <div id="box" class="border">
+            <img src="" alt="" id="myImg" class="img-fluid">
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- js or jqery -->
+    <script>
+        // js
+        $(document).ready(function () {
+            const myBtn = $('.myBtn');
+            const redBtn = $('#redBtn');
+            const box = $('#box');
+            const myImg = $('#myImg');
+            console.log('redBtn', redBtn);
+
+
+
+            // 先做id 再做class
+            redBtn.click(function () {
+                console.log('red ok');
+
+                let getDataColor = $(this).attr('data-color');
+                console.log('dataColor', getDataColor);
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
