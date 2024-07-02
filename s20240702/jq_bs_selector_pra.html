@@ -44,12 +44,27 @@
     <script>
         // js
 
+        const myBtn = document.querySelectorAll('.myBtn');
         const redBtn = document.getElementById('redBtn');
         const box = document.getElementById('box');
         const myImg = document.getElementById('myImg');
 
+        myBtn.forEach(function (value, key) {
+            value.addEventListener('click', function () {
+                console.log('key', key);
+                console.log('value', value);
+                console.log('this', this);
+                let getDataColor = this.getAttribute('data-color');
+                let getDataPhoto = this.getAttribute('data-photo');
+
+                box.setAttribute('class', `border text-center p-5 ${getDataColor}`);
+                let imgUrl = `https://picsum.photos/id/${getDataPhoto}/800/600`;
+                myImg.setAttribute('src', imgUrl);
+            })
+        })
+
         // 先做id 再做class
-        redBtn.addEventListener('click', function () {
+        /* redBtn.addEventListener('click', function () {
             console.log('this', this);
             let getDataColor = this.getAttribute('data-color');
             let getDataPhoto = this.getAttribute('data-photo');
@@ -58,7 +73,7 @@
             let imgUrl = `https://picsum.photos/id/${getDataPhoto}/800/600`;
             console.log('url', imgUrl);
             myImg.setAttribute('src', imgUrl);
-        })
+        }) */
 
     </script>
 </body>
