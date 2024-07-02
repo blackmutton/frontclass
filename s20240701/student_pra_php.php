@@ -28,7 +28,7 @@ $data = [
 dd($data);
 
 
-foreach ($data as $key => $value) {
+/* foreach ($data as $key => $value) {
     $scores = [
         $value['chinese'],
         $value['math'],
@@ -39,7 +39,7 @@ foreach ($data as $key => $value) {
     $data[$key]['avg'] = round(($data[$key]['total'] / count($scores)), 2);
 }
 
-dd($data);
+dd($data); */
 
 ?>
 <!DOCTYPE html>
@@ -79,12 +79,20 @@ dd($data);
                 foreach ($data as $key => $value) :
                 ?>
                     <tr>
+                        <?php
+                        $tmpSum = 0;
+                        $tmpAvg = 0;
+                        $tmpSum = $value['chinese'] + $value['math'] + $value['english'];
+                        $tmpAvg = round(($tmpSum / 3), 2);
+                        ?>
                         <td><?= $value['name'] ?></td>
                         <td><?= $value['chinese'] ?></td>
                         <td><?= $value['math'] ?></td>
                         <td><?= $value['english'] ?></td>
-                        <td><?= $value['avg'] ?></td>
-                        <td><?= $value['total'] ?></td>
+                        <td><?= $tmpAvg ?></td>
+                        <td><?= $tmpSum ?></td>
+                        <!-- <td><?= $value['avg'] ?></td>
+                        <td><?= $value['total'] ?></td> -->
                     </tr>
                 <?php
                 endforeach;
