@@ -49,10 +49,10 @@
                     // 如果沒有dataType:"json"就需要用JSON.parse()來轉換
                     // let data = JSON.parse(res);
 
-                    let data = res;
-                    console.log('data', data);
+                    console.log('res', res);
+                    let data = res.data;
 
-                    $.each(res, function(key, value) {
+                    $.each(data, function(key, value) {
                         console.log('value', value);
                         result += `
                             <tr>
