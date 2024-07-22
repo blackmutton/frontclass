@@ -19,7 +19,7 @@ $data = [
     ],
 ];
 
-dd($data);
+// dd($data);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,33 +52,23 @@ dd($data);
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Doe</td>
-                    <td>0911-111-111</td>
-                    <td class="text-start">
-                        <button type="button" class="btn btn-primary">edit</button>
-                        <button type="button" class="btn btn-danger">del</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Moe</td>
-                    <td>0922-222-222</td>
-                    <td class="text-start">
-                        <button type="button" class="btn btn-primary">edit</button>
-                        <button type="button" class="btn btn-danger">del</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Dooley</td>
-                    <td>0933-333-333</td>
-                    <td class="text-start">
-                        <button type="button" class="btn btn-primary">edit</button>
-                        <button type="button" class="btn btn-danger">del</button>
-                    </td>
-                </tr>
+                <?php
+                foreach ($data as $key => $value) {
+                    // dd($key);
+                    // dd($value);
+                ?>
+                    <tr>
+                        <td><?= $value['id'] ?></td>
+                        <td><?= $value['name'] ?></td>
+                        <td><?= $value['mobile'] ?></td>
+                        <td class="text-start">
+                            <button type="button" class="btn btn-primary">edit</button>
+                            <button type="button" class="btn btn-danger">del</button>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
             </tbody>
         </table>
     </div>
