@@ -2,7 +2,7 @@
 include "base.php";
 $Student = new DB("students");
 // dd("123");
-$data = $Student->all();
+$data = $Student->setRank();
 // 假資料
 /* $data = [
     [
@@ -50,6 +50,7 @@ $data = $Student->all();
                 <tr>
                     <th width="10%">id</th>
                     <th width="10%">name</th>
+                    <th width="10%">rank</th>
                     <th width="20%">mobile</th>
                     <th class="text-start">op</th>
                 </tr>
@@ -63,6 +64,7 @@ $data = $Student->all();
                     <tr>
                         <td><?= $value['id'] ?></td>
                         <td><?= $value['name'] ?></td>
+                        <td><?= $value['rank'] ?></td>
                         <td><?= $value['mobile'] ?></td>
                         <td class="text-start">
                             <button type="button" class="btn btn-primary">edit</button>
@@ -80,7 +82,13 @@ $data = $Student->all();
     <!-- js or jqery -->
     <script>
         $(document).ready(function() {
-
+            $.ajax({
+                type: "get",
+                url: "url",
+                data: "data",
+                dataType: "json",
+                success: function(res) {}
+            })
 
         });
 

@@ -88,6 +88,22 @@ class DB
         }
         return $this->pdo->exec($sql);
     }
+
+    public function setRank()
+    {
+        $data = $this->all();
+        $tmp = $data;
+        foreach ($data as $key => $value) {
+            if ($value['id'] > 2) {
+
+                $tmp[$key]['rank'] = 1;
+            } else {
+                $tmp[$key]['rank'] = 2;
+            }
+        }
+        // dd($tmp);
+        return $tmp;
+    }
 }
 
 function q($sql)
