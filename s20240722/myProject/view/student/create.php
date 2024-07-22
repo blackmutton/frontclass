@@ -16,7 +16,7 @@
 
 <body>
     <h2>新增</h2>
-    <form action="/action_page.php">
+    <form action="../../../api/store.php" method="get">
         <div class="mb-3 mt-3">
             <label for="name" class="form-label">name:</label>
             <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
@@ -26,22 +26,19 @@
             <input type="text" class="form-control" id="mobile" placeholder="Enter mobile" name="mobile">
         </div>
         <div class="d-grid">
-            <button type="button" class="btn btn-success btn-block">add</button>
+            <button type="submit" class="btn btn-success btn-block">add</button>
         </div>
     </form>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- js or jqery -->
     <script>
-
-
-        $(document).ready(function () {
+        $(document).ready(function() {
 
 
         });
 
         // jquery end
-
     </script>
 </body>
 

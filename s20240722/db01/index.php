@@ -44,7 +44,10 @@ $data = $Student->setRank();
     <div class="container mt-3">
         <h2>Striped Rows</h2>
         <p>The .table-striped class adds zebra-stripes to a table:</p>
-        <div class="text-end"><button type="button" class="btn btn-success btn-block">add</button></div>
+        <div class="text-end">
+            <!-- <button type="button" class="btn btn-success btn-block">add</button> -->
+            <a class="btn btn-success" href="../myProject/view/student/create.php">add</a>
+        </div>
         <table class="table table-striped text-center">
             <thead>
                 <tr>
