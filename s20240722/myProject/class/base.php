@@ -2,8 +2,13 @@
 class DB
 {
     protected $table;
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=student";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db0722";
     protected $pdo;
+    public function __construct($table)
+    {
+        $this->table = $table;
+        $this->pdo = new PDO($this->dsn, 'root', '');
+    }
 
     protected function a2s($array)
     {
@@ -44,6 +49,7 @@ class DB
         if (isset($arg[1])) {
             $sql .= $arg[1];
         }
+        return $this->pdo->query($sql)->fetchColumn();
     }
 
     public function find($arg)
@@ -78,7 +84,7 @@ class DB
             $sql .= " where `id`='{$arg['id']}'";
         } else {
             $keys = array_keys($arg);
-            $sql = "insert into `$this->table` (`" . join("`,`", $keys) . "`) values('" . join("','", $arg) . "'";
+            $sql = "insert into `$this->table` (`" . join("`,`", $keys) . "`) values('" . join("','", $arg) . "')";
         }
         return $this->pdo->exec($sql);
     }
@@ -86,7 +92,7 @@ class DB
 
 function q($sql)
 {
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=student";
+    $dsn = "mysql:host=localhost;charset=utf8;dbname=db0722";
     $pdo = new PDO($dsn, 'root', '');
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }

@@ -2,7 +2,7 @@
 class DB
 {
     protected $table;
-    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=student";
+    protected $dsn = "mysql:host=localhost;charset=utf8;dbname=db0722";
     protected $pdo;
     public function __construct($table)
     {
@@ -92,7 +92,7 @@ class DB
 
 function q($sql)
 {
-    $dsn = "mysql:host=localhost;charset=utf8;dbname=student";
+    $dsn = "mysql:host=localhost;charset=utf8;dbname=db0722";
     $pdo = new PDO($dsn, 'root', '');
     return $pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }

@@ -1,7 +1,10 @@
 <?php
 include "base.php";
+$Student = new DB("students");
+// dd("123");
+$data = $Student->all();
 // 假資料
-$data = [
+/* $data = [
     [
         'id' => 1,
         'name' => 'amy',
@@ -17,7 +20,7 @@ $data = [
         'name' => 'bob',
         'mobile' => '0933-333-333'
     ],
-];
+]; */
 
 // dd($data);
 ?>
