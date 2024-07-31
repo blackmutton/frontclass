@@ -48,7 +48,7 @@ class DB
     {
         $sql = "SELECT * FROM students";
         $data =  $this->conn->query($sql)->fetchAll(2);
-        dd($data);
+        // dd($data);
         // $data = $this->getAll();
         $tmp = $data;
         foreach ($data as $key => $value) {
@@ -57,6 +57,24 @@ class DB
             } else {
                 $tmp[$key]['rank'] = 1;
             }
+        }
+        // dd($tmp);
+
+        return $tmp;
+    }
+
+    public function getByID($id)
+    {
+
+        $sql = "SELECT * FROM students WHERE id = $id";
+        $data =  $this->conn->query($sql)->fetch(2);
+        // dd($data);
+        // $data = $this->getAll();
+        $tmp = $data;
+        if ($data['id'] >= 5) {
+            $tmp['rank'] = 2;
+        } else {
+            $tmp['rank'] = 1;
         }
         // dd($tmp);
 
@@ -82,7 +100,7 @@ class DB
     // add
     public function store($data)
     {
-        $data['name'] = $data['name'] . '_Hello';
+        $data['name'] = $data['name'];
 
         $sql = "
         INSERT INTO
@@ -99,6 +117,46 @@ class DB
         // )
 
 
+        $this->conn->exec($sql);
+        // header('Location: http://localhost');
+        // exit();
+    }
+
+    // update
+    public function update($data)
+    {
+        // dd('hello update');
+        // dd($data);
+        // Array
+        // (
+        //     [name] => cat
+        //     [mobile] => 0933-333-333
+        //     [id] => 3
+        // )
+
+        $id = $data['id'];
+
+
+        $sql = "UPDATE
+                    `students`
+                SET
+                    `name` = '{$data['name']}',
+                    `mobile` = '{$data['mobile']}'
+                WHERE
+                    `students`.`id` = $id;";
+
+        // dd($sql);
+
+
+        $this->conn->exec($sql);
+        header('Location: http://localhost');
+        exit();
+    }
+
+    // del
+    public function del($id)
+    {
+        $sql = "DELETE FROM students WHERE `students`.`id` = $id";
         $this->conn->exec($sql);
         header('Location: http://localhost');
         exit();
@@ -122,7 +180,7 @@ class DB
         // dd($data);
 
         header('Location: http://localhost');
-        // exit();
+        exit();
     }
 }
 

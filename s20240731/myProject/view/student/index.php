@@ -104,8 +104,12 @@ $data = $students->getAllSetRank();
                         <td><?= $value['mobile']; ?></td>
                         <td><?= $value['rank']; ?></td>
                         <td class="text-start">
-                            <button type="button" class="btn btn-warning">Edit</button>
-                            <button type="button" class="btn btn-danger">Del</button>
+                            <a class="btn btn-warning" href="./edit.php?id=<?= $value['id']; ?>">Edit</a>
+                            <a class="btn btn-danger" href="../../api/student/del.php?id=<?= $value['id']; ?>">Del</a>
+                            <!-- <button type="button" class="btn btn-warning">
+                                Edit
+                            </button> -->
+                            <!-- <button type="button" class="btn btn-danger">Del</button> -->
                         </td>
                     </tr>
                 <?php endforeach; ?>
