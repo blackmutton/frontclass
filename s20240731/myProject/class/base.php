@@ -119,9 +119,9 @@ class DB
                     (NULL, 'dog', '0944-444-444');";
         $data = $this->conn->exec($sql);
         // $data = $this->conn->query($sql);
-        dd($data);
+        // dd($data);
 
-        // header('Location: http://localhost');
+        header('Location: http://localhost');
         // exit();
     }
 }
