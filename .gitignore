@@ -1,5 +1,6 @@
 /ignore
 # 透過在.gitignore，可以讓部分被記載的檔案不被上傳到github，不過這個被備註的檔案需要在最外層，不能被包住
+# 須先建立.gitignore才可建立被忽略的資料夾或檔案，否則會抓不到
 # 在form表單中可透過js的serialize()與input:hidden來快速抓取表單資料
 # myForm.submit(function(e) {
 #                 e.preventDefault();
