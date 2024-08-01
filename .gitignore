@@ -1,0 +1,31 @@
+/ignore
+# 透過在.gitignore，可以讓部分被記載的檔案不被上傳到github，不過這個被備註的檔案需要在最外層，不能被包住
+# 在form表單中可透過js的serialize()與input:hidden來快速抓取表單資料
+# myForm.submit(function(e) {
+#                 e.preventDefault();
+#                 console.log('submit ok');
+
+#                 let data = $(this).serialize();
+#                 console.log('data', data);
+
+#                 // ajax
+#                 url = "../../api/student/store.php";
+#                 $.ajax({
+#                     type: "get",
+#                     url: url,
+#                     data: data,
+#                     // dataType: "json",
+#                     success: function(res) {
+#                         console.log('res', res);
+#                         let result = res.msg;
+#                         // let toUrl = res.toUrl;
+#                         if (result = "ok") {
+#                             console.log('ajax insert ok');
+#                             // window.location.href = "http://localhost";
+#                             // window.location.href = toUrl;
+#                         }
+#                     }
+#                 });
+#                 // ajax end
+
+#             });
