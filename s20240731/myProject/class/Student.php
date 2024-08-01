@@ -16,7 +16,7 @@ class Student
     public function getAll()
     {
         $sql = "SELECT * FROM students";
-        $data =  $this->conn->query($sql)->fetch_all(MYSQLI_ASSOC);
+        $data =  $this->conn->query($sql)->fetchAll(2);
         // dd($data);
         return $data;
     }

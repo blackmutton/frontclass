@@ -37,7 +37,7 @@ class DB
 
     protected function getAll()
     {
-        $sql = "SELECT * FROM students";
+        $sql = "SELECT * FROM $this->table";
         // $data =  $this->conn->query($sql)->fetch_all(MYSQLI_ASSOC);
         $data =  $this->conn->query($sql)->fetchAll(2);
         // dd($data);
@@ -46,7 +46,7 @@ class DB
 
     public function getAllSetRank()
     {
-        $sql = "SELECT * FROM students";
+        $sql = "SELECT * FROM $this->table";
         $data =  $this->conn->query($sql)->fetchAll(2);
         // dd($data);
         // $data = $this->getAll();
@@ -66,7 +66,7 @@ class DB
     public function getByID($id)
     {
 
-        $sql = "SELECT * FROM students WHERE id = $id";
+        $sql = "SELECT * FROM $this->table WHERE id = $id";
         $data =  $this->conn->query($sql)->fetch(2);
         // dd($data);
         // $data = $this->getAll();
@@ -104,7 +104,7 @@ class DB
 
         $sql = "
         INSERT INTO
-            `students` (`id`, `name`, `mobile`)
+            `$this->table` (`id`, `name`, `mobile`)
         VALUES
             (NULL, '{$data['name']}', '{$data['mobile']}');
         ";
@@ -138,12 +138,12 @@ class DB
 
 
         $sql = "UPDATE
-                    `students`
+                    `$this->table`
                 SET
                     `name` = '{$data['name']}',
                     `mobile` = '{$data['mobile']}'
                 WHERE
-                    `students`.`id` = $id;";
+                    `$this->table`.`id` = $id;";
 
         // dd($sql);
 
@@ -156,7 +156,7 @@ class DB
     // del
     public function del($id)
     {
-        $sql = "DELETE FROM students WHERE `students`.`id` = $id";
+        $sql = "DELETE FROM $this->table WHERE `$this->table`.`id` = $id";
         $this->conn->exec($sql);
         header('Location: http://localhost');
         exit();
@@ -165,11 +165,11 @@ class DB
     // add
     public function rollbackFun()
     {
-        $sql = "TRUNCATE TABLE `db0722`.`students`";
+        $sql = "TRUNCATE TABLE `db0722`.`$this->table`";
         $this->conn->query($sql);
 
         $sql = "INSERT INTO
-                    `students` (`id`, `name`, `mobile`)
+                    `$this->table` (`id`, `name`, `mobile`)
                 VALUES
                     (NULL, 'amy', '0911-111-111'),
                     (NULL, 'bob', '0922-222-222'),
