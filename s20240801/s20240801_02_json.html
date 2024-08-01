@@ -36,21 +36,21 @@
         $(document).ready(function () {
             // bind
             const myTbody = $("#myTbody")
-            let tmp = `
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
-            `
-            myTbody.append(tmp);
+            // let tmp = `
+            // <tr>
+            //     <td>1</td>
+            //     <td>新北市</td>
+            // </tr>
+            // <tr>
+            //     <td>1</td>
+            //     <td>新北市</td>
+            // </tr>
+            // <tr>
+            //     <td>1</td>
+            //     <td>新北市</td>
+            // </tr>
+            // `
+            // myTbody.append(tmp);
             // 方法一 ajax call json local
             url = "./js/data.json";
             $.ajax({
@@ -68,8 +68,16 @@
                     let data = res.records.location
                     let result = '';
                     $.each(data, function (key, value) {
-                        console.log('key', key)
-                        console.log('value', value)
+                        // console.log('key', key)
+                        // console.log('value', value)
+                        console.log('value.locationName', value.locationName)
+                        result = `
+                        <tr>
+                            <td>${key}</td>
+                            <td>${value.locationName}</td>
+                        </tr>
+                        `
+                        myTbody.append(result)
                     })
                 }
 
