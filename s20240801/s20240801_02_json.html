@@ -22,20 +22,7 @@
 
             </tr>
         </thead>
-        <tbody>
-
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>新北市</td>
-            </tr>
+        <tbody id="myTbody">
         </tbody>
     </table>
     </div>
@@ -47,7 +34,23 @@
     <script src="../ignore/weather.js"></script>
     <script>
         $(document).ready(function () {
-
+            // bind
+            const myTbody = $("#myTbody")
+            let tmp = `
+            <tr>
+                <td>1</td>
+                <td>新北市</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>新北市</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>新北市</td>
+            </tr>
+            `
+            myTbody.append(tmp);
             // 方法一 ajax call json local
             url = "./js/data.json";
             $.ajax({
@@ -64,9 +67,9 @@
 
                     let data = res.records.location
                     let result = '';
-                    $.each(data,function(key,value){
-                        console.log('key',key)
-                        console.log('value',value)
+                    $.each(data, function (key, value) {
+                        console.log('key', key)
+                        console.log('value', value)
                     })
                 }
 
