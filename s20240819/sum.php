@@ -20,8 +20,8 @@ $num2 = $_GET['num2'] ?? 0;
 $sum = $num1 + $num2;
 $name = $_GET['name'] ?? 'noname';
 $data = [
-    'num1' => $_GET['num1'],
-    'num2' => $_GET['num2'],
+    'num1' => $num1,
+    'num2' => $num2,
     'sum' => $sum,
     'name' => $name
 ];
