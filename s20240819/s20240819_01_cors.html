@@ -24,12 +24,18 @@
 
         $(document).ready(function () {
             // 兩個路徑皆可，但需要用localhost開啟才能夠連到資料(不可用liveserver)，因為需要同domain
-            let url = "./data.php";
-            // let url = "http://localhost/frontend/s20240819/data.php";
+            // let url = "./data.php";
+            let url = "http://localhost/frontend/s20240819/data.php";
+
+            // 可以利用ip連線其他人
+            // let url = "http://192.168.211.57/data.php";
+            // let url = "http://192.168.211.63/frontend/s20240819/data.php";
+            // let url = "http://192.168.211.65/web2024-sn1/s20240819_cors_php/data.php";
+            let data = { tl: "88" }
             $.ajax({
                 type: "get",
                 url: url,
-                // data:data,
+                data: data,
                 dataType: "json",
                 success: function (res) {
                     console.log(res)
